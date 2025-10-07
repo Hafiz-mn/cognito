@@ -159,7 +159,7 @@ resource "aws_sns_topic_subscription" "lambda_sub" {
 }
 terraform {
   backend "s3" {
-    bucket         = "my-terraform-state-bucket"
+    bucket         = "hafiz-user-api-tfstate-001"
     key            = "user-api/terraform.tfstate"
     region         = "eu-north-1"
     dynamodb_table = "terraform-locks"
