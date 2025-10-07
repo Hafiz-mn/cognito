@@ -8,7 +8,7 @@ terraform.tfvars
 override.tf
 override.tf.json
 *.tfplan
-*.zip
+
 
 # AWS credentials / secrets
 *.pem
