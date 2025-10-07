@@ -49,6 +49,6 @@ jobs:
         SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK }}
 
      - name: Terraform Apply (auto-approve)
-       if: github.ref == 'refs/heads/main'
+       if: github.ref == 'refs/heads/master'
        run:  terraform apply "tfplan.out"
    
