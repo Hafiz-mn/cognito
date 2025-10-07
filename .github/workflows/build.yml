@@ -50,4 +50,4 @@ jobs:
 
      - name: Terraform Apply (auto-approve)
        if: github.ref == 'refs/heads/main'
-       run: terraform apply -auto-approve -var "slack_webhook=${{ secrets.SLACK_WEBHOOK }}" tfplan.out      
+       run: terraform apply -tfplan.out -auto-approve -var "slack_webhook=${{ secrets.SLACK_WEBHOOK }}"   
