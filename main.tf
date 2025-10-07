@@ -157,4 +157,13 @@ resource "aws_sns_topic_subscription" "lambda_sub" {
   protocol  = "lambda"
   endpoint  = aws_lambda_function.user_lambdas["slack_alert"].arn
 }
+terraform {
+  backend "s3" {
+    bucket         = "my-terraform-state-bucket"
+    key            = "user-api/terraform.tfstate"
+    region         = "eu-north-1"
+    dynamodb_table = "terraform-locks"
+    encrypt        = true
+  }
+}
 
