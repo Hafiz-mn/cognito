@@ -4,6 +4,7 @@ variable "region" {
 
 variable "slack_webhook" {
   description = "Slack webhook URL"
+  type = string
 }
 
 variable "table_name" {
